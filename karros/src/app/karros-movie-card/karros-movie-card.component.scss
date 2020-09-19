@@ -1,0 +1,43 @@
+@import "../../theme-color.scss";
+
+.mat-card {
+    width: 400px;
+    height: 700px;
+    margin-top: 30px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    mat-card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        height: 100%;
+        .movie-title {
+            color: $karros-accent;
+            max-height: 50%;
+            overflow-y: hidden;
+        }
+        .movie-genre {
+            color: $karros-accent;
+            flex-grow: 1;
+        }
+        .movie-rate {
+            color: $karros-primary;
+            border: 1px solid $karros-primary;
+            border-radius: 3px;
+            font-size: large;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

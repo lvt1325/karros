@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.karros_content_padding {
+    padding: 0 50px 0 50px;
+}
+.karros_button_icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    cursor: pointer;
+}
+

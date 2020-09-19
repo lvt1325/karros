@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KarrosPanelComponent } from './karros-panel.component';
+import { KarrosMainComponent } from './karros-main.component';
 
-describe('KarrosPanelComponent', () => {
-  let component: KarrosPanelComponent;
-  let fixture: ComponentFixture<KarrosPanelComponent>;
+describe('KarrosMainComponent', () => {
+  let component: KarrosMainComponent;
+  let fixture: ComponentFixture<KarrosMainComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KarrosPanelComponent ]
+      declarations: [ KarrosMainComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KarrosPanelComponent);
+    fixture = TestBed.createComponent(KarrosMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

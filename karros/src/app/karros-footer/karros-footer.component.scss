@@ -1,0 +1,22 @@
+:host {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    .menu_item {
+        margin-left: 20px;
+    }
+  }
+
+  .credit {
+    display: flex;
+    justify-content: space-between;
+
+    .social_icon {
+      display: flex;
+
+      div {
+        margin-left: 10px;
+      }
+    }
+  }
+}

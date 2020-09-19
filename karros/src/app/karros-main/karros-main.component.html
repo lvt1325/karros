@@ -1,0 +1,37 @@
+<div class="component karros_content_padding">
+    <div class="toolbar">
+        <div class="menu">
+            <div class="mat-h3 item" [ngClass]="{'selected': selectedMode==0}" (click)="getMovies(0)">Popular</div>
+            <div class="mat-h3 item" [ngClass]="{'selected': selectedMode==1}" (click)="getMovies(1)">Top Rated</div>
+            <div class="mat-h3 item" [ngClass]="{'selected': selectedMode==2}" (click)="getMovies(2)">Upcoming</div>
+            <div class="mat-h3 item" [ngClass]="{'selected': selectedMode==3}" (click)="getMovies(3)">Genre</div>
+        </div>
+        <div class="view-mode">
+            <div>Grid</div>
+            <div>List</div>
+        </div>
+    </div>
+    <div class="movies_container">
+        <app-karros-movie-card *ngFor="let m of movies;" [movie]="m"></app-karros-movie-card>
+    </div>
+</div>
+<!-- <mat-tab-group class="karros_content_padding">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <label class="karros_mat_tab_label">Popular</label>
+        </ng-template>
+        <button (click)="getMoviesPopular()">Popular</button>
+        <div class="movies_container">
+            <app-karros-movie-card *ngFor="let m of results[0].response.results;" [movie]="m"></app-karros-movie-card>
+        </div>
+    </mat-tab>
+    <mat-tab label="Top Rated">
+        <button (click)="getMoviesTopRated()">Top Rated</button>
+    </mat-tab>
+    <mat-tab label="Upcoming">
+        <button (click)="getMoviesUpcoming()">Upcoming</button>
+    </mat-tab>
+    <mat-tab label="Genre">
+        <button (click)="getGenre()">Genre</button>
+    </mat-tab>
+</mat-tab-group> -->

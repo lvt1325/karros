@@ -30,9 +30,12 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "./node_modules/bootstrap/scss/bootstrap.scss",
-              "src/styles.scss"
+              "./node_modules/swiper/swiper-bundle.min.css",
+              "src/styles.scss",
+              "src/theme-color.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

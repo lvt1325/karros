@@ -24,6 +24,7 @@
     "bootstrap": "^4.5.2",
     "ngx-swiper-wrapper": "^10.0.0",
     "rxjs": "~6.6.0",
+    "swiper": "^6.2.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

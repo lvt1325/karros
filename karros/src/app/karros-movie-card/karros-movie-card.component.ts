@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-karros-movie-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./karros-movie-card.component.scss']
 })
 export class KarrosMovieCardComponent implements OnInit {
+
+  @Input() movie: any;
 
   constructor() { }
 
