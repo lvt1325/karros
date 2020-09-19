@@ -2,19 +2,32 @@
 
 .component {
   .toolbar {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+
     .menu {
       width: 40%;
       display: flex;
-      justify-content: space-between;
       border: 3;
-      .item.selected {
+
+      .item {
+        flex-basis: 200px;
+        text-align: center;
+        margin: 0;
+
+        &.selected {
           color: $karros-primary;
+          border: 3px solid $karros-primary;
+          ;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+        }
       }
     }
+
     .view-mode {
-        display: flex;
+      display: flex;
     }
   }
 }

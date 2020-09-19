@@ -36,12 +36,9 @@ export class MovieServiceService {
     return this.http.get(`https://api.themoviedb.org/3/movie/upcoming?${command}`);
   }
 
-  getGenre(page?: number){
+  getGenre(){
     ///genre/movie/list
     let command = `api_key=${this.apiKey}`;
-    if (page) {
-      command += `&page=${page}`;
-    }
     return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?${command}`);
   }
 

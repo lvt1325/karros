@@ -31,12 +31,16 @@ export class KarrosMainComponent implements OnInit {
   }
   movies = [];
   response: any
+  genres = [];
 
   selectedMode: MovieTypes;
   constructor(private movieService: MovieServiceService) { }
 
   ngOnInit(): void {
-    this.getMovies(MovieTypes.Popular);
+    this.getMoviesSubscriber = this.movieService.getGenre().subscribe((res:any) => {
+      this.genres = res.genres;
+      this.getMovies(MovieTypes.Popular);
+    })
   }
 
   getMovies(type: MovieTypes, page?: number) {
@@ -83,13 +87,22 @@ export class KarrosMainComponent implements OnInit {
   getGenre() {
     this.getMoviesSubscriber = this.movieService.getGenre().subscribe(res => {
       console.log(res);
-      this.processResponseMovies(res);
     })
   }
 
   processResponseMovies(res) {
     this.response = res;
     res.results.forEach(m => {
+      m.geners = [];
+      m.genre_ids.forEach(element => {
+        let g = this.genres.find(g => {
+          return g.id==element;
+        })
+        if (g) {
+          m.geners.push(g.name);
+        }
+      });
+      m.geners = m.geners.join(", ");
       this.movies.push(m);
     });
   }

@@ -23,10 +23,14 @@
             color: $karros-accent;
             max-height: 50%;
             overflow-y: hidden;
+            margin: 0;
         }
         .movie-genre {
             color: $karros-accent;
             flex-grow: 1;
+            margin: 0;
+            height: 50%;
+            overflow-y: hidden;
         }
         .movie-rate {
             color: $karros-primary;
