@@ -28,7 +28,7 @@ import { KarrosMainComponent } from './karros-main/karros-main.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     KMaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

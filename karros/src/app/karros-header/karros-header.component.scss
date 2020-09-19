@@ -1,8 +1,9 @@
 @import "../../theme-color.scss";
 
 .component {
-    position: relative;
-    color: $karros-basic;
+  position: relative;
+  color: $karros-basic;
+
   .toolbar {
     display: flex;
     justify-content: space-between;
@@ -19,8 +20,48 @@
           .main_image {
             width: 100%;
           }
+
+          .slide-content {
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .movie-info {
+              label {
+                padding-right: 20px;
+              }
+
+              button {
+                margin-right: 20px;
+                height: 50px;
+                font-size: large;
+              }
+            }
+
+            .movie-rating {
+              border: 1px solid grey;
+              border-radius: 5px;
+              padding: 20px;
+              height: 100px;
+              .rating-text {
+                  font-size: larger;
+                  margin-right: 10px;
+              }
+            .stars {
+              display: flex;
+              justify-content: space-between;
+              .number {
+                  border: 1px solid grey;
+                  border-radius: 3px;
+              }
+            }
+          }
         }
       }
     }
   }
+}
 }
